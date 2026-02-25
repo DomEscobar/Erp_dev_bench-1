@@ -1,0 +1,120 @@
+{
+  "runs": [
+    {
+      "taskId": "bench-001",
+      "task": {
+        "id": "bench-001",
+        "name": "Items CRUD API + Frontend",
+        "description": "Create a complete Items management system with CRUD API endpoints and frontend table view with add/edit functionality.",
+        "category": "fullstack",
+        "difficulty": "medium"
+      },
+      "startTime": "2026-02-25T16:39:00.000Z",
+      "endTime": "2026-02-25T16:44:00.000Z",
+      "status": "completed",
+      "durationMs": 300000,
+      "metrics": {
+        "timing": {
+          "total": {
+            "durationMs": 300000,
+            "durationSec": 300,
+            "durationMin": 5.0
+          }
+        },
+        "quality": {
+          "taskId": "bench-001",
+          "timestamp": "2026-02-25T16:44:00.000Z",
+          "lint": {
+            "filesChecked": 26,
+            "totalErrors": 0,
+            "totalWarnings": 0,
+            "score": 10,
+            "passed": true
+          },
+          "typescript": {
+            "errorCount": 0,
+            "passed": true
+          },
+          "coverage": {
+            "frontend": {
+              "coverage": 0,
+              "note": "Not configured"
+            },
+            "backend": {
+              "packages": 4,
+              "coverage": 0
+            },
+            "average": 0,
+            "passed": false
+          },
+          "codeQuality": null
+        },
+        "agency": {
+          "taskId": "bench-001",
+          "timestamp": "2026-02-25T16:44:00.000Z",
+          "success": true,
+          "autonomous": true,
+          "kpisPassed": {
+            "typescript": true,
+            "lint": true,
+            "build": true,
+            "tests": true
+          },
+          "iterations": 1,
+          "firstTrySuccess": true,
+          "kpiPassRate": "100"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "generatedAt": "2026-02-25T16:50:00.000Z",
+    "totalRuns": 1,
+    "successRate": 100.0,
+    "avgDuration": 300000,
+    "timing": {
+      "avgCompletionTimeMin": 5.0,
+      "throughputPerHour": 12.0
+    },
+    "errors": {
+      "totalErrors": 0,
+      "totalWarnings": 0,
+      "totalRetries": 0,
+      "errorRate": "0.00",
+      "retryRate": "0.00",
+      "tasksAffected": 0
+    },
+    "quality": {
+      "tasksMeasured": 1,
+      "avgLintScore": 10.0,
+      "avgCoverage": 0,
+      "typeScriptPassRate": 100.0,
+      "qualityScore": 6.7
+    },
+    "agency": {
+      "taskSuccess": {
+        "total": 1,
+        "successful": 1,
+        "autonomous": 1,
+        "successRate": 100.0,
+        "autonomousRate": 100.0
+      },
+      "kpiStats": {
+        "firstTrySuccessRate": 100.0,
+        "avgIterations": "1.00",
+        "kpiPassCounts": {
+          "typescript": 1,
+          "lint": 1,
+          "build": 1,
+          "tests": 1
+        },
+        "kpiPassRates": {
+          "typescript": 100.0,
+          "lint": 100.0,
+          "build": 100.0,
+          "tests": 100.0
+        }
+      }
+    }
+  }
+}

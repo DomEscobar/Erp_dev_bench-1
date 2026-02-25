@@ -1,22 +1,26 @@
 <template>
-  <button :class="$style.button">
+  <button class="base-button">
     <slot>Submit</slot>
   </button>
 </template>
 
-<style lang="scss" module>
-.button {
-  @extend %typography-small;
-
-  padding: $size-button-padding;
+<style scoped>
+.base-button {
+  padding: 0.5rem 1rem;
   border: none;
-  background: $color-button-bg;
-  color: $color-button-text;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 0.875rem;
+  background: #007bff;
+  color: white;
+}
 
-  &:disabled {
-    cursor: not-allowed;
-    background: $color-button-disabled-bg;
-  }
+.base-button:hover {
+  background: #0056b3;
+}
+
+.base-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 </style>

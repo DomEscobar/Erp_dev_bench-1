@@ -1,17 +1,25 @@
 package models
 
 import (
+	"time"
+
 	"gorm.io/gorm"
 )
 
-// Base contains common fields for all models
+// Base contains common fields for all models with proper JSON tags
 type Base struct {
-	gorm.Model
+	ID        uint           `json:"id" gorm:"primaryKey"`
+	CreatedAt time.Time      `json:"createdAt"`
+	UpdatedAt time.Time      `json:"updatedAt"`
+	DeletedAt gorm.DeletedAt `json:"deletedAt" gorm:"index"`
 }
 
-// Example model for benchmarking
+// Item represents a product/item in the inventory
 type Item struct {
-	gorm.Model
-	Name        string `gorm:"not null" json:"name"`
-	Description string `json:"description"`
+	Base
+	Name        string  `json:"name" gorm:"not null"`
+	Description string  `json:"description"`
+	Price       float64 `json:"price" gorm:"not null"`
+	SKU         string  `json:"sku" gorm:"unique"`
+	CategoryID  uint    `json:"categoryId"`
 }

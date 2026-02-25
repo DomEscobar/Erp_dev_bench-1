@@ -173,7 +173,9 @@ class BenchmarkRunner {
       const orchestratorPath = path.join(this.config.agencyPath, 'orchestrator.cjs');
       
       // Create task file for agency
-      const taskFilePath = path.join(this.config.agencyPath, 'tasks', `benchmark-${task.id}.json`);
+      const tasksDir = path.join(this.config.agencyPath, 'tasks');
+      fs.mkdirSync(tasksDir, { recursive: true });
+      const taskFilePath = path.join(tasksDir, `benchmark-${task.id}.json`);
       fs.writeFileSync(taskFilePath, JSON.stringify({
         id: task.id,
         description: task.description,

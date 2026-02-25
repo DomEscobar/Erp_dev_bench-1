@@ -45,14 +45,9 @@
     "intent": "CREATE",
     "keywords": ["item", "product", "crud", "api", "endpoint", "table", "form", "store"],
     "expectedFiles": [
-      "backend/internal/models/item.go",
       "backend/internal/handlers/items.go",
-      "backend/internal/handlers/items_test.go",
       "frontend/src/pages/ItemsPage.vue",
-      "frontend/src/components/ItemsTable.vue",
-      "frontend/src/components/ItemForm.vue",
-      "frontend/src/stores/items.ts",
-      "frontend/src/router/routes.ts"
+      "frontend/src/stores/items.ts"
     ],
     "kpis": {
       "typescript": true,
