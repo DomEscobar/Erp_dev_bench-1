@@ -10,6 +10,8 @@ declare module 'vue' {
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
     BaseButton: typeof import('./src/components/BaseButton.vue')['default']
     BaseInputText: typeof import('./src/components/BaseInputText.vue')['default']
+    ItemForm: typeof import('./src/components/ItemForm.vue')['default']
+    ItemsTable: typeof import('./src/components/ItemsTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

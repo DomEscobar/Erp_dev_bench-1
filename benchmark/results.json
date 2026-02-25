@@ -1,0 +1,268 @@
+{
+  "runs": [
+    {
+      "taskId": "bench-001",
+      "task": {
+        "id": "bench-001",
+        "name": "Items CRUD API + Frontend",
+        "description": "Create a complete Items management system with CRUD API endpoints and frontend table view with add/edit functionality.",
+        "category": "fullstack",
+        "difficulty": "medium",
+        "requirements": {
+          "backend": {
+            "model": {
+              "name": "Item",
+              "fields": [
+                {
+                  "name": "ID",
+                  "type": "uint",
+                  "gorm": "primaryKey"
+                },
+                {
+                  "name": "Name",
+                  "type": "string",
+                  "gorm": "not null",
+                  "json": "name"
+                },
+                {
+                  "name": "Description",
+                  "type": "string",
+                  "json": "description"
+                },
+                {
+                  "name": "Price",
+                  "type": "float64",
+                  "gorm": "not null",
+                  "json": "price"
+                },
+                {
+                  "name": "SKU",
+                  "type": "string",
+                  "gorm": "unique",
+                  "json": "sku"
+                },
+                {
+                  "name": "CategoryID",
+                  "type": "uint",
+                  "json": "categoryId"
+                }
+              ]
+            },
+            "endpoints": [
+              {
+                "method": "GET",
+                "path": "/api/v1/items",
+                "description": "List all items"
+              },
+              {
+                "method": "GET",
+                "path": "/api/v1/items/:id",
+                "description": "Get item by ID"
+              },
+              {
+                "method": "POST",
+                "path": "/api/v1/items",
+                "description": "Create item"
+              },
+              {
+                "method": "PUT",
+                "path": "/api/v1/items/:id",
+                "description": "Update item"
+              },
+              {
+                "method": "DELETE",
+                "path": "/api/v1/items/:id",
+                "description": "Delete item"
+              }
+            ]
+          },
+          "frontend": {
+            "pages": [
+              "ItemsPage.vue"
+            ],
+            "components": [
+              "ItemsTable.vue",
+              "ItemForm.vue"
+            ],
+            "stores": [
+              "items.ts"
+            ],
+            "features": [
+              "Display items in table",
+              "Add new item modal/form",
+              "Edit existing item",
+              "Delete item with confirmation"
+            ]
+          },
+          "tests": {
+            "backend": "Test all CRUD operations",
+            "frontend": "Test table renders, form submits"
+          }
+        },
+        "groundTruth": {
+          "intent": "CREATE",
+          "keywords": [
+            "item",
+            "product",
+            "crud",
+            "api",
+            "endpoint",
+            "table",
+            "form",
+            "store"
+          ],
+          "expectedFiles": [
+            "backend/internal/handlers/items.go",
+            "frontend/src/pages/ItemsPage.vue",
+            "frontend/src/stores/items.ts"
+          ],
+          "kpis": {
+            "typescript": true,
+            "lint": true,
+            "build": true,
+            "tests": true
+          }
+        },
+        "estimatedFiles": 8,
+        "estimatedTime": "15-30 min"
+      },
+      "startTime": "2026-02-24T16:17:38.884Z",
+      "endTime": "2026-02-24T16:23:12.561Z",
+      "status": "failed",
+      "metrics": {
+        "timing": [
+          {
+            "taskId": "bench-001",
+            "phase": "total",
+            "startTime": "2026-02-24T16:17:38.885Z",
+            "endTime": "2026-02-24T16:23:03.373Z",
+            "durationMs": 324488,
+            "durationSec": "324.49",
+            "durationMin": "5.41"
+          },
+          {
+            "taskId": "bench-001",
+            "phase": "agency",
+            "startTime": "2026-02-24T16:17:38.885Z",
+            "endTime": "2026-02-24T16:23:03.373Z",
+            "durationMs": 324488,
+            "durationSec": "324.49",
+            "durationMin": "5.41"
+          }
+        ],
+        "quality": {
+          "taskId": "bench-001",
+          "timestamp": "2026-02-24T16:23:03.374Z",
+          "lint": {
+            "filesChecked": 24,
+            "totalErrors": 44,
+            "totalWarnings": 0,
+            "score": 0,
+            "passed": false
+          },
+          "typescript": {
+            "errorCount": 0,
+            "output": "",
+            "passed": true
+          },
+          "coverage": {
+            "frontend": {
+              "coverage": 0,
+              "note": "No coverage data found"
+            },
+            "backend": {
+              "packages": 5,
+              "coverage": 0
+            },
+            "average": 0,
+            "passed": false
+          },
+          "codeQuality": null
+        },
+        "agency": {
+          "taskId": "bench-001",
+          "timestamp": "2026-02-24T16:23:03.374Z",
+          "success": false,
+          "autonomous": true,
+          "kpisPassed": {
+            "typescript": false,
+            "lint": false,
+            "build": false,
+            "tests": false
+          },
+          "iterations": 1,
+          "pmOutput": null,
+          "discoveryOutput": null,
+          "kpiPassRate": "0",
+          "firstTrySuccess": false
+        }
+      },
+      "durationMs": 324488
+    }
+  ],
+  "summary": {
+    "generatedAt": "2026-02-24T16:11:33.535Z",
+    "totalRuns": 0,
+    "successRate": 0,
+    "avgDuration": 0,
+    "timing": null,
+    "errors": {
+      "totalErrors": 0,
+      "totalWarnings": 0,
+      "totalRetries": 0,
+      "errorRate": "0.00",
+      "retryRate": "0.00",
+      "tasksAffected": 0,
+      "errorsByType": {},
+      "errorsByPhase": {},
+      "recoverableErrors": 0,
+      "unrecoverableErrors": 0
+    },
+    "tokens": {
+      "totalInputTokens": 0,
+      "totalOutputTokens": 0,
+      "totalTokens": 0,
+      "totalCost": 0,
+      "totalCostFormatted": "$0.000000",
+      "tasksWithUsage": 0,
+      "avgTokensPerTask": 0,
+      "avgCostPerTask": 0,
+      "avgCostPerTaskFormatted": "$0.000000",
+      "byModel": {}
+    },
+    "quality": {
+      "tasksMeasured": 0,
+      "avgLintScore": 0,
+      "avgCoverage": 0,
+      "typeScriptPassRate": 0,
+      "qualityScore": 0
+    },
+    "agency": {
+      "taskSuccess": {
+        "total": 0,
+        "successful": 0,
+        "autonomous": 0,
+        "successRate": 0,
+        "autonomousRate": 0
+      },
+      "kpiStats": {
+        "firstTrySuccessRate": 0,
+        "avgIterations": "0.00",
+        "kpiPassCounts": {
+          "typescript": 0,
+          "lint": 0,
+          "build": 0,
+          "tests": 0
+        },
+        "kpiPassRates": {
+          "typescript": 0,
+          "lint": 0,
+          "build": 0,
+          "tests": 0
+        }
+      },
+      "pmAccuracy": null,
+      "fileDiscovery": null
+    }
+  }
+}

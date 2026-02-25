@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": {
+      "/root/Erp_dev_bench-3/.opencode/get-shit-done/*": "allow"
+    },
+    "external_directory": {
+      "/root/Erp_dev_bench-3/.opencode/get-shit-done/*": "allow"
+    }
+  }
+}
